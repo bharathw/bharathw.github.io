@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text File Content</title>
+</head>
+<body>
+  <h1>Content of "mytextfile.txt"</h1>
+  <pre>
+    <?php
+      $filename = "mytextfile.txt";
+      if (file_exists($filename)) {
+        echo htmlspecialchars(file_get_contents($filename));
+      } else {
+        echo "Error: File not found";
+      }
+    ?>
+  </pre>
+</body>
+</html>
